@@ -20,20 +20,23 @@ const navegacion= ref([
 
 <style scoped>
 .navbar {
-  background-color:var(--vt-c-indigo);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  align-items: center;
+  background-color:var(--vt-c-indigo); /* Establece el color de fondo usando una variable CSS.*/
+  color: #fff; /* Establece el color del texto en blanco. */
+  padding: 0.5rem 1rem; /* Añade un padding de 0.5rem arriba y abajo, y de 1rem a los lados. */
+  align-items: center; /* Centra verticalmente los elementos dentro de la navbar. */
 }
+
 .navbar-item {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 1rem;
+  color: #fff; /* Establece el color del texto en blanco. */
+  text-decoration: none; /* Elimina el subrayado de los enlaces. */
+  margin-right: 1rem; /* Añade un margen derecho de 1rem entre los elementos. */
 }
+
 .navbar-menu {
-  display: flex;
-  justify-content: flex-end;
+  display: flex; /* Organiza los elementos en línea usando flexbox */
+  justify-content: flex-end; 
 }
+
 .nav-list {
   list-style: none;
 }
