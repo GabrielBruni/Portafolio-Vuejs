@@ -1,7 +1,10 @@
 <script setup>
 import NavBar from './components/NavBar.vue';
 import DatosPersonales from './components/DatosPersonales.vue';
-import Educación from './components/Educación.vue';
+import Educación from './components/EducaciónComponente.vue';
+import ExperienciaComponente from './components/ExperienciaComponente.vue';
+import ProyectosComponente from './components/ProyectosComponente.vue';
+import HabilidadesComponente from './components/HabilidadesComponente.vue';
 </script>
 
 <template>
@@ -13,16 +16,30 @@ import Educación from './components/Educación.vue';
   </header>
   <main>
       <!-- El estilo css de section se encuentra en base.css -->
-      <section id="educacion"><h2>Educación - Cursos</h2>
-      <Educación />
+      <section id="educacion">
+        <h2>Educación - Cursos</h2>
+        <!-- Componente Educación -->
+        <Educación />
       </section>
-      <section id="experiencia"><h2>Experiencia</h2></section>
-      <section id="proyectos"><h2>Proyectos</h2></section>
-      <section id="habilidades"><h2>Habilidades</h2></section>
-      <section id="intereses"><h2>Intereses</h2></section>
+      <section id="experiencia">
+        <h2>Experiencia</h2>
+        <!-- Componente Experiencia -->
+        <ExperienciaComponente />
+      </section>
+      <section id="proyectos">
+        <h2>Proyectos</h2>
+        <!-- Componente Proyectos -->
+         <ProyectosComponente />
+      </section>
+      <section id="habilidades">
+        <!-- Componente Habilidades -->
+        <h2>Habilidades</h2>
+        <HabilidadesComponente />
+      </section>
+      <section id="intereses">
+        <h2>Intereses</h2>
+      </section>
   </main>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
