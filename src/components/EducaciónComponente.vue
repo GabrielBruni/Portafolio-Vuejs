@@ -9,14 +9,14 @@ fechaColor.value = [
     {color: '#1B5F8C'},
     {color: '#4CADAD'},
 ];
-const educacion = ref([]);
-educacion.value = [
+/* Esta es la forma de utilizar el arreglo, sin el método value. */
+const educacion = ref([
     {fecha: '2024', title: 'Tecnicatura Universitaria en Progrmación', descripcion: '.....', enlace: '....'},
     {fecha: '2024', title: 'Tecnicatura Universitaria en Progrmación', descripcion: '.....', enlace: '....'},
     {fecha: '2024', title: 'Tecnicatura Universitaria en Progrmación', descripcion: '.....', enlace: '....'},
     {fecha: '2024', title: 'Tecnicatura Universitaria en Progrmación', descripcion: '.....', enlace: '....'},
     {fecha: '2024', title: 'Tecnicatura Universitaria en Progrmación', descripcion: '.....', enlace: '....'},
-];
+]);
 </script>
 
 <template>

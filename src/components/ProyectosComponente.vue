@@ -1,32 +1,48 @@
 <script setup>
-// Este componente muestra una galería de proyectos con información sobre cada proyecto.
+import proyecto1 from "/src/assets/proyecto.JPEG";
+import proyecto2 from "/src/assets/proyecto.JPEG";
+
+// Este componente muestra una galería de proyectos con información sobre cada proyecto
 import { ref } from 'vue';
-// .ref es una función que se utiliza para crear una referencia reactiva en Vue 3.
+//.ref es una función que se utiliza para crear una referencia reactiva en Vue 3
 var misProyectos = ref([]);
-// .value es una propiedad que se utiliza para acceder al valor de una referencia reactiva en Vue 3.
+//.value es una propiedad que se utiliza para acceder al valor de una referencia reactiva en Vue 3
 misProyectos.value = ([
-    // Esto es una array de objetos que contiene información sobre los proyectos.
-
-
-
+    //esto es un array de objetos que contiene información sobre los proyectos
+    {
+        id: 1,
+        src: proyecto1,
+        titulo: "AGILEPACK",
+        descripcion: "Una empresa dedicada al envase de todo tipo y tamaño de frutos secos.",
+        projectoLink: "https://www.google.com.ar",
+        githubLink: "https://github.com/usuario/proyecto"
+    },
+    {
+        id: 2,
+        src: proyecto2,
+        titulo: "AGILEPACK",
+        descripcion: "Una empresa dedicada al envase de todo tipo y tamaño de frutos secos.",
+        projectoLink: "https://www.google.com.ar",
+        githubLink: "https://github.com/usuario/proyecto"
+    },
 ])
 
 </script>
 
 <template>
-    <!-- Aquí va el código HTML de la galería de proyectos. -->
+    <!-- Aquí va el código HTML de la galería de proyectos -->
     <div class="galeria">
-        <!-- Itera sobre cada proyecto en la lista de misProyectos. -->
-        <!-- key es una propiedad especial que se utiliza para identificar de forma única cada elemento en una lista de Vue.js -->
+        <!-- Itera sobre cada proyecto en la lista de misProyectos -->
+        <!--key es una propiedad especial que se utiliza para identificar de forma única cada elemento en una lista de Vue.js-->
         <li class="proyecto" v-for="proyecto in misProyectos" :key="proyecto.id">
             <!-- Muestra la imagen del proyecto utilizando : que es una directiva de enlace de atributo en Vue.js -->
-            <img :src="proyecto.src" :alt="proyecto.titulo">
+            <img :src="proyecto.src" :alt="proyecto.titlulo">
             <div class="proyecto-info">
                 <!-- Muestra el título y la descripción del proyecto utilizando la interpolación de Vue.js -->
                 <h3>{{ proyecto.titulo }}</h3>
                 <p>{{ proyecto.descripcion }}</p>
                 <div class="proyecto-links">
-                    <a :href="proyecto.proyectoLink" class="btn-ver-mas" target="_blank" rel="noopener noreferrer">Ver
+                    <a :href="proyecto.projectoLink" class="btn-ver-mas" target="_blank" rel="noopener noreferrer">Ver
                         Proyecto</a>
                     <a :href="proyecto.githubLink" class="github-link" target="_blank" rel="noopener noreferrer">Ver
                         Código en GitHub</a>
@@ -34,35 +50,11 @@ misProyectos.value = ([
             </div>
         </li>
     </div>
-        <div class="proyecto">
-            <img src="/src/assets/proyecto.JPEG" alt="Proyecto 1">
-            <div class="proyecto-info">
-                <h3>AGILEPACK</h3>
-                <p>Una empresa dedicada al envase de todo tipo y tamaño de frutos secos.</p>
-                <div class="proyecto-links">
-                    <a href="https://proyecto1.com" class="btn-ver-mas" target="_blank" rel="noopener noreferrer">Ver
-                        Proyecto</a>
-                    <a href="https://github.com/usuario/proyecto1" class="github-link" target="_blank"
-                        rel="noopener noreferrer">Ver Código en GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div class="proyecto">
-            <img src="/src/assets/proyecto.JPEG" alt="Proyecto 1">
-            <div class="proyecto-info">
-                <h3>AGILEPACK</h3>
-                <p>Una empresa dedicada al envase de todo tipo y tamaño de frutos secos.</p>
-                <div class="proyecto-links">
-                    <a href="https://proyecto1.com" class="btn-ver-mas" target="_blank" rel="noopener noreferrer">Ver
-                        Proyecto</a>
-                    <a href="https://github.com/usuario/proyecto1" class="github-link" target="_blank"
-                        rel="noopener noreferrer">Ver Código en GitHub</a>
-                </div>
-            </div>
-        </div>
+    
 </template>
 
 <style scoped>
+/*Estilo de fondo de la galeria con un fondo estatico. */
 /* .galeria{
     width: 100%;
     height: 100vh;
